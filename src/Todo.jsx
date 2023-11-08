@@ -10,7 +10,8 @@ export const Todos = () => {
     }
 
     const handleList = (e) => {
-        if(e.key === "Enter" && task.trim() != ""){
+        e.preventDefault() 
+        if(task.trim() != ""){
             setList(list.concat([task]))
             setTask("")
         }
@@ -23,7 +24,10 @@ export const Todos = () => {
             <ul className="toDoList">
                 <h1>My Todos</h1>
                 <li>
-                    <input placeholder="Write new task" onChange={handleTask} onKeyDown={handleList} value={task} type="text"></input>
+                    <form onSubmit={handleList}>
+                        <input placeholder="Write new task" onChange={handleTask} value={task} type="text"></input>
+                    </form>
+                    
                 </li>
                 {list.map((item, index) => (
                     <li>
@@ -34,7 +38,7 @@ export const Todos = () => {
                         </i>
                     </li>
                 ))}
-                <p>{list.length === 1 ? "You have only 1 task left!" : `${list.length === 0 ? "Congratulations! You have no tasks left!" : `${list.length} tasks left`}` } </p>
+                <p>{list.length === 1 ? "You have only 1 task left!" : `${list.length === 0 ? "Congratulations! You have no tasks left!" : `${list.length} tasks left`}`}</p>
             </ul>
 
         </div>
