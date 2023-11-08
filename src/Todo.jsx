@@ -34,6 +34,7 @@ export const Todos = () => {
                         </i>
                     </li>
                 ))}
+                <p>{list.length === 1 ? "You have only 1 task left!" : `${list.length === 0 ? "Congratulations! You have no tasks left!" : `${list.length} tasks left`}` } </p>
             </ul>
 
         </div>
