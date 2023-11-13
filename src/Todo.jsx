@@ -1,4 +1,3 @@
-//comentario para hacer el pull request
 
 import React, { useState, useEffect } from "react";
 
@@ -138,6 +137,8 @@ export const Todos = () => {
 
                 <p>{list.length === 1 ? "You have only 1 task left!" : `${list.length === 0 ? "Congratulations! You have no tasks left!" : `${list.length} tasks left`}`}</p>
             </ul>
+
+            <button className="eraser" onClick={deleteUser}>Borrar lista</button>
            
 
 

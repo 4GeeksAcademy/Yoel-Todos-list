@@ -9,6 +9,7 @@ body{
   justify-content: center;
   align-items: center;
   width: 100%;
+  position: relative;
 }
 
 .toDoList{
@@ -66,4 +67,16 @@ i {
 
 li:hover i{
   visibility: visible;
+}
+.eraser{
+  position: absolute;
+  top: 110%;
+  background: lightgoldenrodyellow;
+  border: 2px solid #e9e9a3;
+  padding: 1%;
+  font-size: 14px;
+  border-radius: 5px;
+}
+.eraser:hover{
+  background: #e9e9a3;
 }
