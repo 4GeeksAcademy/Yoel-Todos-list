@@ -61,4 +61,10 @@ li {
   /* overflow: hidden; */
 
 }
+i {
+  visibility: hidden;
+}
 
+li:hover i{
+  visibility: visible;
+}
