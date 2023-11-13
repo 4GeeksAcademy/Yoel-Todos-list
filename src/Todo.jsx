@@ -1,5 +1,3 @@
-//comentario para ahcer el pull request
-
 import React, { useState, useEffect } from "react";
 
 export const Todos = () => {
