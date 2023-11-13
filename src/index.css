@@ -37,7 +37,7 @@ body{
 
 input{
   border: none;
-  width: 100%;
+  width: 180%;
   padding: 0;
   outline: 0;
   background-color: lightgoldenrodyellow; 
@@ -58,6 +58,7 @@ li {
   display: flex;
   justify-content:space-between;
   background-color: lightgoldenrodyellow;
+  /* overflow: hidden; */
 
 }
 
