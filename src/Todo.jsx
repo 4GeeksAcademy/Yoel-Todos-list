@@ -34,7 +34,6 @@ export const Todos = () => {
         const response = await fetch("https://playground.4geeks.com/apis/fake/todos/user/Yoel")
         if(response.ok){
             const data = await response.json()
-               
                 const filtered = data.filter((item) => item.label !== "example task")
                 setList(filtered)    
         }
@@ -54,9 +53,7 @@ export const Todos = () => {
         if(updatedList.length > 0){
             const response = await fetch(url, options)
             if (response.ok) {
-            const data = await response.json()
                 getUser()
-                console.log(list)
             }
             else {
                 console.log("Error", response.status, response.statusText)
@@ -87,6 +84,7 @@ export const Todos = () => {
     }    
 
     useEffect(() => {
+        postUser();
         getUser();
     }, []);
     
@@ -112,8 +110,6 @@ export const Todos = () => {
             const newList = list.filter((currentItem, currentIndex) => index !== currentIndex);
             putList(newList);
             setList(newList);
-            return newList;
-        console.log(list);
     };
     
 
